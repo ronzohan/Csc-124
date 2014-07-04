@@ -1,0 +1,52 @@
+import java.awt.List;
+import java.util.ArrayList;
+
+
+public class RightDominant {
+
+	public ArrayList<Integer> findRightDominant(int[] numArray)
+	{
+		int key;
+		int count=0; //count for right dominant
+		boolean isRightDominant = false;
+		ArrayList<Integer>  answerArray = new ArrayList<Integer>();
+		
+		for(int i = 0;i<numArray.length;i++)
+		{
+			key = numArray[i];
+			for(int j=i+1;j<numArray.length;j++)
+			{
+				
+				if (key < numArray[j])
+				{
+					key = numArray[j];
+					isRightDominant = true;
+						if (key < numArray[k])
+						{
+							isRightDominant = false;
+							break;
+						}
+					}
+					if (isRightDominant == true)
+					{
+						answerArray.add(key);
+						if (j == numArray.length-1)
+							key = numArray[j];
+						else
+							key = numArray[j+1];
+						i = j+1;
+					}
+					
+				}
+			}
+			if (answerArray.get(answerArray.size()-1) != key)
+				answerArray.add(key);
+			
+			
+		}
+		
+		
+		
+		return answerArray;
+	}
+}

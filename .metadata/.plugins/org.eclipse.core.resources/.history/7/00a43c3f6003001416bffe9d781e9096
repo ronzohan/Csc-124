@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Random;
+
+
+public class tester {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		RightDominant rd = new RightDominant();
+		int size = 11;
+		int[] numArray ;
+		//= new int[] {10, 9, 5, 13, 2, 7, 1, 8, 4, 6, 3};
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		 
+		arrayList = rd.findRightDominant(numArray);
+		for(int i =0;i<arrayList.size();i++)
+			System.out.print(arrayList.get(i) + " ");
+
+	}
+	public static void createRandom(int[] numArray)
+	{
+		Random rd = new Random();
+		for(int i =0;i<numArray.length;i++)
+			numArray[i] = rd.nextInt(10000);
+		
+		
+	}
+
+}

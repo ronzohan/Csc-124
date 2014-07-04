@@ -1,0 +1,29 @@
+import java.awt.List;
+
+
+public class RightDominant {
+
+	public int[] findRightDominant(int[] numArray)
+	{
+		int key;
+		int rightDominantCount=0;
+		int count=0; //count for right dominant
+		int[] answerArray = new int[numArray.length]; 
+		
+		for(int i = 0;i<numArray.length;i++)
+		{
+			key = numArray[i];
+			for(int j=i+1;j<numArray.length;j++)
+			{
+				if 
+				
+			}
+			
+			
+		}
+		
+		
+		
+		return numArray;
+	}
+}

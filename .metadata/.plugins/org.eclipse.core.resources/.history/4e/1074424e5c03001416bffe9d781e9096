@@ -1,0 +1,18 @@
+
+public class RightDominant {
+
+	public int[] findRightDominant(int[] numArray)
+	{
+		int[] AnswerArray;
+		for(int i = 0;i<numArray.length;i++)
+		{
+			
+			
+			
+		}
+		
+		
+		
+		return numArray;
+	}
+}

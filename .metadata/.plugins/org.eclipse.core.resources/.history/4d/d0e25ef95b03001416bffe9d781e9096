@@ -1,0 +1,19 @@
+ public class SortingClass
+ {
+public int [] InsertionSort(int iArray[]){
+        for (int j = 2; j < iArray.length; j++){
+            int key = iArray[j];
+            int i = j - 1;
+            while (i >= 0 && iArray[i] > key){
+                iArray[i+1] = iArray[i];
+                i = i - 1;
+                iArray[i + 1] = key;
+            }
+        }
+        /*for (int i = 0; i < iArray.length; i++){
+            System.out.print(" " + iArray[i] );
+        }*/
+        return iArray;
+        
+    }
+ }

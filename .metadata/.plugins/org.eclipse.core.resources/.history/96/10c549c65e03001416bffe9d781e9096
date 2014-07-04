@@ -1,0 +1,16 @@
+
+public class tester {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		RightDominant rd = new RightDominant();
+		int size = 11;
+		int[] numArray = new int[11]args;
+		
+		
+
+	}
+
+}
