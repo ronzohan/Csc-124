@@ -9,7 +9,7 @@ public class tester {
 	 */
 	public static void main(String[] args) {
 		RightDominant rd = new RightDominant();
-		int size = 1000;
+		int size = 100000;
 		int[] numArray = new int[size];
 		//= new int[] {10, 9, 5, 13, 2, 7, 1, 8, 4, 6, 3};
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
