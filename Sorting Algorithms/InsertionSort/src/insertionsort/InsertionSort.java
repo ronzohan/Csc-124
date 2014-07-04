@@ -1,0 +1,108 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package insertionsort;
+
+/**
+ *
+ * @author u2012-0377
+ */
+import java.util.Random;
+
+public class InsertionSort {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int[] iArray;
+        long start, end, total;
+        
+        
+        iArray = new int[5000];
+        Random r = new Random();
+        
+        for (int i = 0; i < iArray.length; i++){
+            iArray[i] = r.nextInt(10000);
+        }
+        
+        System.out.println("First: ");
+        start = System.currentTimeMillis();
+        iArray = InsertionSort(iArray);
+        end = System.currentTimeMillis();
+        total  = end - start;
+        //System.out.println();
+        System.out.println(total + "ms");
+        for (int i = 0; i < iArray.length; i++){
+            System.out.print(" " + iArray[i] );
+        }
+        
+       System.out.println();
+       System.out.println("Second: ");
+        start = System.currentTimeMillis();
+        InsertionSort(iArray);
+        end = System.currentTimeMillis();
+        total  = end - start;
+        //System.out.println();
+        System.out.println(total + "ms");
+       for (int i = 0; i < iArray.length; i++){
+            System.out.print(" " + iArray[i] );
+        }
+        //InsertionSort(iArray);
+       
+       int k = 5000;
+       for (int i = 0; i < iArray.length; i++){
+            iArray[i] = k;
+            k--;
+        }
+       System.out.println();
+       System.out.println("Third: ");
+       start = System.currentTimeMillis();
+        InsertionSort(iArray);
+        end = System.currentTimeMillis();
+        total  = end - start;
+        //System.out.println();
+        System.out.println(total + "ms");
+       
+        for (int i = 0; i < iArray.length; i++){
+            System.out.print(" " + iArray[i] );
+        }
+        //InsertionSort(iArray);
+       
+       
+        }
+        
+        
+        
+               
+         
+    
+    
+    public static int [] InsertionSort(int iArray[]){
+        for (int j = 2; j < iArray.length; j++){
+            int key = iArray[j];
+            int i = j - 1;
+            while (i >= 0 && iArray[i] > key){
+                iArray[i+1] = iArray[i];
+                i = i - 1;
+                iArray[i + 1] = key;
+            }
+        }
+        /*for (int i = 0; i < iArray.length; i++){
+            System.out.print(" " + iArray[i] );
+        }*/
+        return iArray;
+        
+    }
+    
+    /*public static void Ascending(int iArray[]){
+        
+    }
+    */
+    
+   
+    
+    
+}
