@@ -24,7 +24,7 @@ public class SortingClass
 	public  void merge(int[] numArray,int p,int q,int r)
 	{
 		int n1 = q-p+1;
-		int n2 = r-q;
+		int n2 = r -q;
 		
 		int i;
 		int j;
@@ -55,9 +55,9 @@ public class SortingClass
 			}
 		}
 		while (i<LeftArr.length)
-			numArray[++k] = LeftArr[i++];
+			numArray[k++] = LeftArr[i++];
 		while (j<RightArr.length)
-			numArray[++k] = RightArr[j++];
+			numArray[k++] = RightArr[j++];
 	}
 	
 	public void mergeSort(int[] numArray,int p, int r)

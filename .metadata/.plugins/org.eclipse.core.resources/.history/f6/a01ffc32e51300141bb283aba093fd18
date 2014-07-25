@@ -10,14 +10,14 @@ public class Tester{
 	public static void main(String[] args) throws FileNotFoundException {
 		SortingClass sort = new SortingClass();
 		int size = 15000;
-		int[] numArr = new int[]{64,20,45,,12,21,93,4,46}; //generic does not support primitive data types i.e. int
+		int[] numArr = new int[]{64,20,45,45,12,21,93,4,45}; //generic does not support primitive data types i.e. int
 		//numArr = readFromFile_int("reverse15000.txt", numArr, size);
 		//int[] numArr = new int[size];
         long start,end,total;
         
         
         start = System.currentTimeMillis();
-		sort.mergeSort(numArr,0,8);
+		sort.mergeSort(numArr,0,size-1);
 		end = System.currentTimeMillis();
 		total = end - start;
 		System.out.print("Sorted number:");

@@ -55,9 +55,9 @@ public class SortingClass
 			}
 		}
 		while (i<LeftArr.length)
-			numArray[++k] = LeftArr[i++];
+			numArray[k++] = LeftArr[i++];
 		while (j<RightArr.length)
-			numArray[++k] = RightArr[j++];
+			numArray[k++] = RightArr[j++];
 	}
 	
 	public void mergeSort(int[] numArray,int p, int r)
