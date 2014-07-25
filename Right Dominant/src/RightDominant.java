@@ -1,5 +1,8 @@
 import java.awt.List;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class RightDominant {
@@ -29,4 +32,29 @@ public class RightDominant {
 		
 		return answerArray;
 	}
+	  int[] readFile(String filename,int size)
+	    {
+	         File f = new File(filename);
+	           int[] NumArr = new int[size];
+	         try
+	         {
+	         Scanner sc = new Scanner(f);
+	          int idx = 0;
+	       
+	         while(sc.hasNext() && idx != size){
+
+	             NumArr[idx] = sc.nextInt();
+	             idx++;
+	         }
+	        
+	         }
+	         catch(FileNotFoundException e)
+	         {
+	             
+	             
+	         }
+	        
+	        return NumArr;
+	    }
+	    
 }

@@ -9,11 +9,13 @@ public class tester {
 	 */
 	public static void main(String[] args) {
 		RightDominant rd = new RightDominant();
-		int size = 1000;
+		int size = 15000;
 		int[] numArray = new int[size];
 		//= new int[] {10, 9, 5, 13, 2, 7, 1, 8, 4, 6, 3};
+		
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
-	    numArray =  createRandom(numArray);
+		numArray = rd.readFile("sorted15000.txt", size);
+	    //numArray =  createRandom(numArray);
 	    for(int k =0;k<size;k++)
 	    	System.out.print(numArray[k]+" ");
 	    System.out.println();
@@ -23,9 +25,10 @@ public class tester {
 		arrayList = rd.findRightDominant(numArray);
 		 end = System.currentTimeMillis();
 		 total = end - start;
-		 System.out.println(total+" ms");
+	
 		for(int i =0;i<arrayList.size();i++)
 			System.out.print(arrayList.get(i) + " ");
+		 System.out.println("\n" +total+" ms");
 
 	}
 	public static int[] createRandom(int[] numArray)
