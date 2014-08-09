@@ -13,7 +13,7 @@ public class Tester{
 	//	Integer[] numArr = new Integer[size]; //generic does not support primitive data types i.e. int
 	  //  int[] numArr = new int[]{9,4,7,12};
 		int[] numArr = new int[size];
-		numArr = readFromFile("sorted15000.txt", numArr, size);
+		numArr = readFromFile("reverse15000.txt", numArr, size);
         long start,end,total;
         
         
