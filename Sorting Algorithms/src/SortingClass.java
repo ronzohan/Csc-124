@@ -82,4 +82,10 @@ public class SortingClass
 		}
 	}
 	
+	public void quicksort()
+	{
+
+
+
+	}
 }
