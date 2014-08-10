@@ -80,16 +80,17 @@ public class SortingClass
 			mergeSort(numArray, q+1, r);
 			merge(numArray,p,q,r);
 		}
-	}
+	}	
 	
 	public void quickSort(int[] numArray,int p,int r)
 	{
-		int q;
+
 		if (p<r)
 		{
-			q = partition(numArray,p,r);
+			int q = partition(numArray,p,r);
 			quickSort(numArray,p,q-1);
 			quickSort(numArray,q+1,r);
+		
 		}
 	}
 	
@@ -97,7 +98,7 @@ public class SortingClass
 	{
 		int x = numArray[r];
 		int i = p-1;
-		for(int j = p;j<r-1;j++)
+		for(int j = p;j<r;j++)
 		{
 			if (numArray[j] <= x)
 			{
