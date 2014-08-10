@@ -82,10 +82,34 @@ public class SortingClass
 		}
 	}
 	
-	public void quicksort()
+	public void quickSort(int[] numArray,int p,int r)
 	{
-
-
-
+		int q;
+		if (p<r)
+		{
+			q = partition(numArray,p,r);
+			quickSort(numArray,p,q-1);
+			quickSort(numArray,q+1,r);
+		}
+	}
+	
+	public int partition(int[] numArray,int p,int r)
+	{
+		int x = numArray[r];
+		int i = p-1;
+		for(int j = p;j<r-1;j++)
+		{
+			if (numArray[j] <= x)
+			{
+				i++;
+				int temp = numArray[i];
+				numArray[i] = numArray[j];
+				numArray[j] = temp;
+			}
+		}
+		int temp = numArray[i+1];
+		numArray[i+1] = numArray[r];
+		numArray[r] = temp;
+		return i+1;
 	}
 }
