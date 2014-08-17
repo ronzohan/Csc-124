@@ -11,14 +11,14 @@ public class Tester{
 		SortingClass sort = new SortingClass();
 		int size = 15000;
 	//	Integer[] numArr = new Integer[size]; //generic does not support primitive data types i.e. int
-	  //  int[] numArr = new int[]{9,4,7,12};
-		int[] numArr = new int[size];
-		numArr = readFromFile("reverse15000.txt", numArr, size);
+	    int[] numArr = new int[size];
+		numArr = readFromFile("sorted15000.txt", numArr, size);
+		
         long start,end,total;
         
         
         start = System.currentTimeMillis();
-		sort.mergeSort(numArr, 0,size-1);
+		sort.quickSort(numArr, 0, numArr.length-1);
 		end = System.currentTimeMillis();
 		total = end - start;
 		System.out.print("Sorted number:");
@@ -48,7 +48,7 @@ public class Tester{
 		 File f = new File(filename);
          Scanner sc = new Scanner(f);
          int idx = 0;
-         while(sc.hasNext()){
+         while(sc.hasNext() && idx <size){
         	 numArr[idx] = sc.nextInt();
        
              idx++;
